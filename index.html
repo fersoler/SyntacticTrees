@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Syntactic trees</title>
+
+<!-- CSS Files -->
+<link type="text/css" href="base.css" rel="stylesheet">
+<link type="text/css" href="Spacetree.css" rel="stylesheet">
+
+<!--[if IE]><script language="javascript" type="text/javascript" src="./excanvas.js"></script><![endif]-->
+
+<!-- JIT Library File -->
+<script language="javascript" type="text/javascript" src="jit-yc.js"></script>
+<script language="javascript" type="text/javascript" src="stree.js"></script>
+   
+<script type="text/javascript" src="formulas.js"></script>
+<script type="text/javascript" src="parser.js"></script>
+<script type="text/javascript" src="utilities.js"></script>
+<script type="text/javascript" src="proplogic.js"></script>
+
+</head>
+<body onload="init('p v q -> (-p -> -p & q)');">
+    <h2>Syntactic trees</h2>
+    <div align="right">Developed by <a href="https://personal.us.es/fsoler/">Fernando Soler-Toscano</a>.</div>
+    <hr>
+    <a href="javascript:toggle();" id="displayText">Show info</a> 
+<div id="toggleText" style="display: none;"> 
+    <p>Use this program to build a syntactic tree. You can drag and move the tree through the blue area. Pink nodes can be expanded by clicking on them. 
+    <p>Syntax of the operators according to precedence order:
+      <ul>	
+	<li><b>Atoms</b> are any combination of lowercase letters and digits, except the 'v', which is used for disjunction	  
+	<li><b>Negation</b> is the dash '-'	  
+	<li><b>Conjunction</b> is the ampersand '&amp;'	  
+	<li><b>Disjunction</b> is the letter 'v'	  
+	<li><b>Implication</b> is the dash followed by the grater than symbol '->'
+      </ul> 
+      All operators are interpreted as right-associative. 
+    </p> 
+</div> 
+<br><br> 
+
+    <form>
+    <input type="text" id="MathInput" value="p v q -> (-p -> -p & q)" size="50">
+    <input type="button" onclick="init(MathInput.value)" value="Show tree" />
+    </form>
+    <div id="valid"></div>
+    
+    
+    <font color="red"><div id="warning"></div></font>
+</div>    
+
+<br>
+
+
+
+<p>
+<div id="container">
+
+<div id="center-container"> 
+    <div id="infovis"></div>    
+</div> 
+
+</div>
+
+
+<div id="log"></div> 
+</div>
+
+</body> 
+</html> 
