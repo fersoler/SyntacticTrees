@@ -4,6 +4,8 @@ Program to build syntactic trees in propositional logic.
 You can drag and move the tree through the blue panel. 
 Pink nodes can be expanded by clicking on them.
 
+It can be accessed at: https://fersoler.github.io/SyntacticTrees/
+
 Syntax of the operators according to precedence order:
 
 - Atoms are any combination of lowercase letters and digits, except the 'v', which is used for disjunction
